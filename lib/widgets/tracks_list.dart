@@ -20,7 +20,6 @@ class TracksList extends StatelessWidget {
       showCheckboxColumn: false,
       columns: const [
         DataColumn(label: Text('#')),
-        DataColumn(label: Text('COVER')),
         DataColumn(label: Text('TITLE')),
         DataColumn(label: Text('ARTIST')),
         DataColumn(label: Text('ALBUM')),
@@ -40,18 +39,21 @@ class TracksList extends StatelessWidget {
             DataCell(
               Text(e.id, style: textStyle),
             ),
-            DataCell(
-              Image.network(
-                e.cover,
-                height: 40.0,
-                width: 40.0,
-                fit: BoxFit.cover,
-                filterQuality: FilterQuality.medium,
+            DataCell(Expanded(
+              child: Row(
+                children: [
+                  Image.network(
+                    e.cover,
+                    height: 40.0,
+                    width: 40.0,
+                    fit: BoxFit.cover,
+                    filterQuality: FilterQuality.medium,
+                  ),
+                  const SizedBox(width: 20.0),
+                  Text(e.title, style: textStyle),
+                ],
               ),
-            ),
-            DataCell(
-              Text(e.title, style: textStyle),
-            ),
+            )),
             DataCell(
               Text(e.artist, style: textStyle),
             ),
