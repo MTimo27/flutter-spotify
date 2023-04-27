@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spotify/data/data.dart';
 import 'package:flutter_spotify/models/current_track_model.dart';
 import 'package:flutter_spotify/screens/playlist_screen.dart';
-import 'package:flutter_spotify/widgets/side_menu.dart';
 import 'package:flutter_spotify/widgets/widgets.dart';
 import 'package:provider/provider.dart';
 import 'package:desktop_window/desktop_window.dart';
